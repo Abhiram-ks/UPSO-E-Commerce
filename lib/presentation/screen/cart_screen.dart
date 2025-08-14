@@ -29,6 +29,7 @@ class CartScreen extends StatelessWidget {
             Text(
               'Everything you’ve handpicked is waiting here. Review, tweak, or add more your perfect haul is just a tap away.',
             ),
+            const SizedBox(height: 20,), 
             Expanded(
               child: ListView.builder(
                 itemCount: cart.items.length,
