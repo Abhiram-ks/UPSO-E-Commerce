@@ -8,19 +8,22 @@ import 'cart_screen.dart';
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     final products = [
-      ProductModel(id: '1', name: 'Shoes', price: 59.99, image: 'assets/shoes.png'),
-      ProductModel(id: '2', name: 'T-Shirt', price: 19.99, image: 'assets/tshirt.png'),
-      ProductModel(id: '3', name: 'Watch', price: 99.99, image: 'assets/watch.png'),
-      ProductModel(id: '4', name: 'Bag', price: 39.99, image: 'assets/bag.png'),
-      ProductModel(id: '5', name: 'Cap', price: 9.99, image: 'assets/cap.png'),
+      ProductModel(id: '1', name: 'Shoes', price: 59.99, image: 'assets/shoes.jpeg'),
+      ProductModel(id: '2', name: 'T-Shirt', price: 19.99, image: 'assets/tshirt.jpg'),
+      ProductModel(id: '3', name: 'Watch', price: 99.99, image: 'assets/watch.webp'),
+      ProductModel(id: '4', name: 'Bag', price: 39.99, image: 'assets/bag.jpg'),
+      ProductModel(id: '5', name: 'lapTop', price: 9.99, image: 'assets/laptop.webp'),
     ];
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Products'),
+        backgroundColor: Colors.white,
         actions: [
           Consumer<CartProvider>(
             builder: (context, cart, _) => Stack(

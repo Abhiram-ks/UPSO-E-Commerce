@@ -12,7 +12,7 @@ class CartItemWidget extends StatelessWidget {
     final cart = Provider.of<CartProvider>(context, listen: false);
 
     return ListTile(
-      leading: Image.asset(product.image, width: 50),
+      leading: Image.asset(product.image, width: 50, fit: BoxFit.cover,),
       title: Text(product.name),
       subtitle: Text('\$${product.price.toStringAsFixed(2)}'),
       trailing: Row(

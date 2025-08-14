@@ -11,24 +11,54 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cart = Provider.of<CartProvider>(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Your Cart')),
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: cart.items.length,
-              itemBuilder: (_, i) =>
-                  CartItemWidget(product: cart.items[i]),
+      backgroundColor: Colors.white,
+      appBar: AppBar(backgroundColor: Colors.white),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Your Cart',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              'Total: \$${cart.totalPrice.toStringAsFixed(2)}',
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            Text(
+              'Everything you’ve handpicked is waiting here. Review, tweak, or add more your perfect haul is just a tap away.',
             ),
-          )
-        ],
+            Expanded(
+              child: ListView.builder(
+                itemCount: cart.items.length,
+                itemBuilder: (_, i) => CartItemWidget(product: cart.items[i]),
+              ),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 14,
+                    horizontal: 10,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onPressed: () {},
+                child: Text(
+                  'Checkout RS ${cart.totalPrice.toStringAsFixed(2)}',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+          ],
+        ),
       ),
     );
   }
