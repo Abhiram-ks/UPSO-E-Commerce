@@ -1,4 +1,5 @@
-https://github.com/Abhiram-ks/UPSO-E-Commerce/blob/335020f1f3849057ec603caf472909141d6d1df9/ecommerceapplication.png
+![image alt](https://github.com/Abhiram-ks/UPSO-E-Commerce/blob/335020f1f3849057ec603caf472909141d6d1df9/ecommerceapplication.png)
+
 
 # E-commerce
 
