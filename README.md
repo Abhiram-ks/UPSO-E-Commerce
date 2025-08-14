@@ -1,4 +1,6 @@
-# ecommerce_upso
+https://github.com/Abhiram-ks/UPSO-E-Commerce/blob/335020f1f3849057ec603caf472909141d6d1df9/ecommerceapplication.png
+
+# E-commerce
 
 # Project Overview:
 A lightweight, offline-first e‑commerce cart sample built with Flutter + Dart, using Hive (NoSQL) for local storage and Provider for state management. The codebase follows a Clean Architecture + modular structure so features remain testable, scalable, and easy to maintain.
